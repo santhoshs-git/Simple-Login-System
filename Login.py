@@ -9,6 +9,9 @@ def displayMenu():
         newUser()
 def newUser():
     createlogin = input("Create Login name: ")
+    if len(createlogin)<=4:
+        print("Username length should be minimum 4 characters")
+        newUser()
     if createlogin in users:
         print("\nLogin name already exists!\n")
     else:
